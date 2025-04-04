@@ -1,0 +1,753 @@
+<!-- HTML Structure -->
+<section class="contact" id="contact">
+    <div class="contact-header">
+        <h2>Get in Touch</h2>
+        <p>We value your inquiries and are committed to providing prompt assistance</p>
+    </div>
+    
+    <div class="contact-container">
+        <!-- Contact Information -->
+        <div class="contact-details">
+            <div class="contact-card">
+                <div class="contact-icon">
+                    <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <h3>Our Location</h3>
+                <p>1250 Enterprise Drive<br>Suite 300<br>Chicago, IL 60606</p>
+            </div>
+            
+            <!-- Social Media Integration -->
+            <div class="social-media-section">
+                <h3>Connect With Us</h3>
+                <div class="social-icons">
+                    <a href="#" class="social-icon facebook" title="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="social-icon twitter" title="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="social-icon instagram" title="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="social-icon linkedin" title="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="#" class="social-icon tiktok" title="TikTok">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
+                    <a href="#" class="social-icon youtube" title="YouTube">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+                <p class="social-text">Stay updated with our latest news and promotions</p>
+            </div>
+        </div>
+        
+        <!-- Contact Form -->
+        <div class="form-wrapper">
+            <div class="notification success" id="successMessage">
+                <i class="fas fa-check-circle"></i>
+                <span>Your message has been sent successfully. Our team will contact you shortly.</span>
+            </div>
+            
+            <div class="notification error" id="errorMessage">
+                <i class="fas fa-exclamation-circle"></i>
+                <span>There was an error submitting your message. Please try again or contact us directly.</span>
+            </div>
+            
+            <form id="contactForm">
+                <div class="input-group">
+                    <label for="name">Full Name <span class="required">*</span></label>
+                    <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                    <p class="input-error" id="nameError"></p>
+                </div>
+                
+                <div class="input-group">
+                    <label for="email">Email Address <span class="required">*</span></label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+                    <p class="input-error" id="emailError"></p>
+                </div>
+                
+                <div class="input-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Enter your phone number (optional)">
+                </div>
+                
+                <div class="input-group">
+                    <label for="subject">Subject <span class="required">*</span></label>
+                    <input type="text" id="subject" name="subject" placeholder="Enter message subject" required>
+                    <p class="input-error" id="subjectError"></p>
+                </div>
+                
+                <div class="input-group">
+                    <label for="message">Message <span class="required">*</span></label>
+                    <textarea id="message" name="message" placeholder="Enter your message" rows="5" required></textarea>
+                    <p class="input-error" id="messageError"></p>
+                </div>
+                
+                <div class="input-group">
+                    <label for="howDidYouHear">How did you hear about us?</label>
+                    <select id="howDidYouHear" name="howDidYouHear">
+                        <option value="">Please select an option</option>
+                        <option value="search">Search Engine</option>
+                        <option value="social">Social Media</option>
+                        <option value="friend">Friend/Colleague</option>
+                        <option value="advertisement">Advertisement</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                
+                <div class="input-group checkbox">
+                    <input type="checkbox" id="privacy" name="privacy" required>
+                    <label for="privacy">I consent to having this website store my submitted information</label>
+                    <p class="input-error" id="privacyError"></p>
+                </div>
+                
+                <div class="input-group checkbox">
+                    <input type="checkbox" id="newsletter" name="newsletter">
+                    <label for="newsletter">Subscribe to our newsletter for updates and promotions</label>
+                </div>
+                
+                <button type="submit" id="submitButton" class="submit-button">
+                    <span class="button-text">Submit Message</span>
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </form>
+            
+            <!-- Mobile Social Media Icons -->
+            <div class="social-media-mobile">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <a href="#" class="social-icon facebook" title="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="social-icon twitter" title="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="social-icon instagram" title="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="social-icon linkedin" title="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="#" class="social-icon tiktok" title="TikTok">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
+                    <a href="#" class="social-icon youtube" title="YouTube">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Add this to your head section to include Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<style>
+/* Base Styles */
+.contact {
+    padding: 100px 0;
+    background-color: #f0f4f8;
+    font-family: 'Montserrat', 'Arial', sans-serif;
+}
+
+.contact-header {
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+.contact-header h2 {
+    font-size: 36px;
+    color: #1a365d;
+    margin-bottom: 18px;
+    font-weight: 700;
+    position: relative;
+    padding-bottom: 20px;
+}
+
+.contact-header h2:after {
+    content: '';
+    position: absolute;
+    width: 70px;
+    height: 4px;
+    background-color: #3182ce;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.contact-header p {
+    font-size: 17px;
+    color: #4a5568;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+.contact-container {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 60px;
+    padding: 0 30px;
+}
+
+/* Contact Information Styles */
+.contact-details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.contact-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+    transition: all 0.4s ease;
+    border-bottom: 4px solid transparent;
+}
+
+.contact-card:hover {
+    transform: translateY(-8px);
+    border-bottom: 4px solid #3182ce;
+}
+
+.contact-icon {
+    height: 60px;
+    width: 60px;
+    background-color: #ebf4ff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+.contact-card:hover .contact-icon {
+    background-color: #3182ce;
+}
+
+.contact-icon i {
+    font-size: 24px;
+    color: #3182ce;
+    transition: all 0.3s ease;
+}
+
+.contact-card:hover .contact-icon i {
+    color: #ffffff;
+}
+
+.contact-card h3 {
+    font-size: 20px;
+    color: #1a365d;
+    margin: 0 0 12px 0;
+    font-weight: 600;
+}
+
+.contact-card p {
+    font-size: 15px;
+    color: #4a5568;
+    line-height: 1.8;
+    margin: 0;
+}
+
+/* Social Media Section */
+.social-media-section {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+    text-align: center;
+    border-bottom: 4px solid transparent;
+    transition: all 0.4s ease;
+}
+
+.social-media-section:hover {
+    transform: translateY(-8px);
+    border-bottom: 4px solid #3182ce;
+}
+
+.social-media-section h3 {
+    font-size: 20px;
+    color: #1a365d;
+    margin: 0 0 25px 0;
+    font-weight: 600;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    color: white;
+    font-size: 20px;
+    transition: all 0.4s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.social-icon:hover {
+    transform: translateY(-5px) rotate(10deg);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.social-icon.facebook {
+    background-color: #1877f2;
+}
+
+.social-icon.twitter {
+    background-color: #1da1f2;
+}
+
+.social-icon.instagram {
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+}
+
+.social-icon.linkedin {
+    background-color: #0077b5;
+}
+
+.social-icon.tiktok {
+    background-color: #000000;
+}
+
+.social-icon.youtube {
+    background-color: #ff0000;
+}
+
+.social-text {
+    font-size: 15px;
+    color: #4a5568;
+    margin: 15px 0 0;
+    line-height: 1.6;
+}
+
+/* Form Styles */
+.form-wrapper {
+    flex: 1;
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+    transition: all 0.4s ease;
+    border-bottom: 4px solid transparent;
+}
+
+.form-wrapper:hover {
+    border-bottom: 4px solid #3182ce;
+}
+
+.input-group {
+    margin-bottom: 25px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 15px;
+    color: #2d3748;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.required {
+    color: #e53e3e;
+    margin-left: 3px;
+}
+
+.input-group input,
+.input-group textarea,
+.input-group select {
+    width: 100%;
+    padding: 14px 18px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 15px;
+    color: #2d3748;
+    transition: all 0.3s ease;
+    background-color: #f8fafc;
+}
+
+.input-group input:focus,
+.input-group textarea:focus,
+.input-group select:focus {
+    outline: none;
+    border-color: #3182ce;
+    box-shadow: 0 0 0 4px rgba(49, 130, 206, 0.15);
+    background-color: #ffffff;
+}
+
+.input-group input.error,
+.input-group textarea.error,
+.input-group select.error {
+    border-color: #e53e3e;
+    background-color: #fff5f5;
+}
+
+.input-error {
+    font-size: 13px;
+    color: #e53e3e;
+    margin: 8px 0 0;
+    display: none;
+}
+
+/* Checkbox Styling */
+.checkbox {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.checkbox input {
+    width: 18px;
+    height: 18px;
+    margin-top: 3px;
+    cursor: pointer;
+}
+
+.checkbox label {
+    font-size: 15px;
+    margin: 0;
+    line-height: 1.5;
+    color: #4a5568;
+    font-weight: normal;
+}
+
+/* Submit Button */
+.submit-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    background-color: #3182ce;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 16px 28px;
+    font-size: 17px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    width: 100%;
+    box-shadow: 0 4px 15px rgba(49, 130, 206, 0.3);
+}
+
+.submit-button:hover {
+    background-color: #2c5282;
+    box-shadow: 0 6px 20px rgba(49, 130, 206, 0.4);
+    transform: translateY(-3px);
+}
+
+.submit-button i {
+    transition: transform 0.4s ease;
+}
+
+.submit-button:hover i {
+    transform: translateX(8px);
+}
+
+/* Notification Messages */
+.notification {
+    display: none;
+    align-items: center;
+    padding: 18px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+.notification.success {
+    background-color: #e6fffa;
+    color: #234e52;
+    border: 1px solid #b2f5ea;
+}
+
+.notification.error {
+    background-color: #fff5f5;
+    color: #822727;
+    border: 1px solid #fed7d7;
+}
+
+.notification i {
+    font-size: 20px;
+    margin-right: 12px;
+}
+
+/* Mobile Social Media Section */
+.social-media-mobile {
+    display: none;
+    margin-top: 35px;
+    text-align: center;
+    padding-top: 25px;
+    border-top: 1px solid #e2e8f0;
+}
+
+.social-media-mobile h4 {
+    font-size: 18px;
+    color: #1a365d;
+    margin: 0 0 18px 0;
+    font-weight: 500;
+}
+
+/* Loading State */
+.submit-button.loading {
+    background-color: #90cdf4;
+    cursor: not-allowed;
+}
+
+.submit-button.loading .button-text {
+    visibility: hidden;
+}
+
+.submit-button.loading i {
+    position: absolute;
+    animation: spin 1s linear infinite;
+}
+
+.submit-button.loading i:before {
+    content: '\f110';
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 992px) {
+    .contact-container {
+        flex-direction: column;
+        gap: 40px;
+    }
+    
+    .contact-details {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+    }
+    
+    .social-media-section {
+        grid-column: span 2;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .contact {
+        padding: 70px 0;
+    }
+    
+    .contact-details {
+        grid-template-columns: 1fr;
+    }
+    
+    .form-wrapper {
+        padding: 30px;
+    }
+    
+    .contact-header h2 {
+        font-size: 30px;
+    }
+    
+    .social-media-section {
+        display: none;
+    }
+    
+    .social-media-mobile {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .contact {
+        padding: 50px 0;
+    }
+    
+    .contact-header {
+        margin-bottom: 50px;
+    }
+    
+    .form-wrapper {
+        padding: 25px 20px;
+    }
+    
+    .input-group input, 
+    .input-group textarea, 
+    .input-group select {
+        padding: 12px 15px;
+    }
+    
+    .submit-button {
+        padding: 14px 20px;
+    }
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Get form elements
+    const contactForm = document.getElementById('contactForm');
+    const submitButton = document.getElementById('submitButton');
+    const successMessage = document.getElementById('successMessage');
+    const errorMessage = document.getElementById('errorMessage');
+    
+    // Form inputs
+    const nameInput = document.getElementById('name');
+    const emailInput = document.getElementById('email');
+    const subjectInput = document.getElementById('subject');
+    const messageInput = document.getElementById('message');
+    const privacyCheckbox = document.getElementById('privacy');
+    
+    // Error elements
+    const nameError = document.getElementById('nameError');
+    const emailError = document.getElementById('emailError');
+    const subjectError = document.getElementById('subjectError');
+    const messageError = document.getElementById('messageError');
+    const privacyError = document.getElementById('privacyError');
+    
+    // Social media link tracking
+    const socialLinks = document.querySelectorAll('.social-icon');
+    socialLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const platform = this.getAttribute('title');
+            console.log(`Social link clicked: ${platform}`);
+            // Here you would add code to open the social platform in a new window
+            // window.open(this.href, '_blank');
+        });
+    });
+    
+    // Validation functions
+    function validateEmail(email) {
+        const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return regex.test(email);
+    }
+    
+    function validateField(input, errorElement, minLength, message) {
+        if (input.value.trim().length < minLength) {
+            input.classList.add('error');
+            errorElement.textContent = message;
+            errorElement.style.display = 'block';
+            return false;
+        } else {
+            input.classList.remove('error');
+            errorElement.style.display = 'none';
+            return true;
+        }
+    }
+    
+    // Real-time validation
+    nameInput.addEventListener('blur', function() {
+        validateField(nameInput, nameError, 2, 'Please enter your full name (minimum 2 characters)');
+    });
+    
+    emailInput.addEventListener('blur', function() {
+        if (!validateEmail(emailInput.value.trim())) {
+            emailInput.classList.add('error');
+            emailError.textContent = 'Please enter a valid email address';
+            emailError.style.display = 'block';
+        } else {
+            emailInput.classList.remove('error');
+            emailError.style.display = 'none';
+        }
+    });
+    
+    subjectInput.addEventListener('blur', function() {
+        validateField(subjectInput, subjectError, 5, 'Please enter a subject (minimum 5 characters)');
+    });
+    
+    messageInput.addEventListener('blur', function() {
+        validateField(messageInput, messageError, 10, 'Please enter your message (minimum 10 characters)');
+    });
+    
+    // Form submission
+    contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // Hide previous notifications
+        successMessage.style.display = 'none';
+        errorMessage.style.display = 'none';
+        
+        // Validate all fields
+        let isValid = true;
+        
+        isValid = validateField(nameInput, nameError, 2, 'Please enter your full name (minimum 2 characters)') && isValid;
+        
+        if (!validateEmail(emailInput.value.trim())) {
+            emailInput.classList.add('error');
+            emailError.textContent = 'Please enter a valid email address';
+            emailError.style.display = 'block';
+            isValid = false;
+        }
+        
+        isValid = validateField(subjectInput, subjectError, 5, 'Please enter a subject (minimum 5 characters)') && isValid;
+        isValid = validateField(messageInput, messageError, 10, 'Please enter your message (minimum 10 characters)') && isValid;
+        
+        if (!privacyCheckbox.checked) {
+            privacyError.textContent = 'You must consent to our privacy policy';
+            privacyError.style.display = 'block';
+            isValid = false;
+        } else {
+            privacyError.style.display = 'none';
+        }
+        
+        if (!isValid) {
+            return;
+        }
+        
+        // Collect form data for potential analytics
+        const formData = {
+            name: nameInput.value,
+            email: emailInput.value,
+            phone: document.getElementById('phone').value,
+            subject: subjectInput.value,
+            message: messageInput.value,
+            source: document.getElementById('howDidYouHear').value,
+            newsletter: document.getElementById('newsletter').checked
+        };
+        
+        console.log('Form submission:', formData);
+        
+        // Show loading state
+        submitButton.classList.add('loading');
+        submitButton.querySelector('i').classList.remove('fa-paper-plane');
+        submitButton.querySelector('i').classList.add('fa-spinner');
+        
+        // Simulate form submission
+        setTimeout(function() {
+            submitButton.classList.remove('loading');
+            submitButton.querySelector('i').classList.remove('fa-spinner');
+            submitButton.querySelector('i').classList.add('fa-paper-plane');
+            
+            // Show success message (90% of the time)
+            if (Math.random() < 0.9) {
+                successMessage.style.display = 'flex';
+                contactForm.reset();
+                
+                // Hide success message after 5 seconds
+                setTimeout(function() {
+                    successMessage.style.display = 'none';
+                }, 5000);
+            } else {
+                // Show error message
+                errorMessage.style.display = 'flex';
+                
+                // Hide error message after 5 seconds
+                setTimeout(function() {
+                    errorMessage.style.display = 'none';
+                }, 5000);
+            }
+        }, 1800);
+    });
+});
+</script>
